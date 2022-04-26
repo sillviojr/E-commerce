@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body {
+    background-color: #101010;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+h1.logo {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    color: #FFF;
+    font-size: 30px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 15px;
+}
+
+nav#menu {
+        background-image: linear-gradient(to right, #18092a, #300c5f, #310e91);
+        width: 100%;
+        height: 70px;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+
+a.link {
+        color: #AAA;
+        text-decoration: none;
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+
+.container-login {
+    margin-left: 20px;
+}
+
+#campo-login {
+    border: rgb(35, 10, 145) 1px solid;
+    border-radius: 3px;
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.label-login {
+    font-size: 15pt;
+    color: rgb(35, 10, 145);
+}
+
+.input-login {
+    padding: 7px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgb(35, 10, 145);
+    color: rgb(35, 10, 145);
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+a.container-login {
+    color: rgb(35, 10, 145);
+    text-decoration: none;
+}
+
+a.container-login:hover {
+    text-decoration: underline;
+}
+
+
+
+
+button.entrar {
+    padding: 3px 6px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    width: 267px;
+    
+}
+
+a.esq-senha {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+#campo-cadastro {
+    border: rgb(35, 10, 145) 1px solid;
+    border-radius: 3px;
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+p, a {
+    color: rgb(35, 10, 145);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*=================================Ińicio da edição do código parte Footer============================*/
+footer {
+    background-image: linear-gradient(to right, #18092a, #300c5f, #310e91);
+    width: 100%;
+    height: 210px;
+    margin-top: 50px;
+    padding: 10px;
+
+}
+
+
+footer img, p.informacao {
+    display: inline-block;
+    color: #FFF;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.conteudo-metodos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
