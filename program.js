@@ -5,29 +5,15 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 
-//Aba principal
-app.get("/", (req, res) =>{
+//Rota principal
+app.get("/home", (req, res) =>{
     res.render("home")
 })
 
-//Rota cadastro
+//Rota teste
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
