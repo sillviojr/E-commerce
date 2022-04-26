@@ -6,11 +6,11 @@ app.use(express.static('public'))
 
 
 //Rota principal
-app.get("/home", (req, res) =>{
+app.get("/", (req, res) =>{
     res.render("home")
 })
 
-//Rota teste
+//Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
 })
