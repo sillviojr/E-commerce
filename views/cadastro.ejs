@@ -1,65 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastro.css">
-    <link href="/cadastro.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/22aca25b85.js" crossorigin="anonymous"></script>
-    <title>Cadastro</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
-<body>
-    <header>
-        <!--<img src="" class="logo-foto" width="30px" alt="">-->
-        <h1 class="logo">EJS eletronics</h1>
-        <nav id="menu">
-            <a href="./index.html" class="link">Início</a>
-            <a href="" class="link">Mouses</a>
-            <a href="" class="link">Microfones</a>
-            <a href="http://" class="link">Headsets</a>
-            <a href="/monitores.html" class="link">Monitores</a>
-            
-        </nav>
-    </header>
-    <div id= "form">
-        <form action="">
-          <h2 class="title">Cadastrar</h2>
+<body style="height: 500px">
 
-            <label for="username">Nome</label>            
-            <div class="input" >
+<div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ml">
+            <a
+                href="#"
+                class="navbar-brand mb-0 h1 p-2 ">
+                EJS
 
-                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                <input id ="username" name="username" placeholder="username" type="text">
+            </a>
 
-            </div>
+            <button type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="navbarNav"
+            class="navbar-toggler" 
+            aria-controls="navbarNav" 
+            aria-expended="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <label for="">Email</label>                    
-            <div class="input">
-
-            <i class="fa-solid fa-envelope"></i>
-            <input id = "Email" name="Email"   placeholder="Email"  type="text">
-
-            </div>
-
-            <label for="">Senha</label>                   
-            <div class="input">
-
-            <i class="fa-solid fa-lock"></i>
-            <input id = "Senha" name="Senha"   placeholder="Senha"  type="password">
-
-            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-25">
                     
-            <div class = "btn">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle"
+                        type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                          Periféricos
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a href="#" class="dropdown-item">Mouses</a> </li>
+                                <a href="#" class="dropdown-item">Teclados</a> </li>
+                                <a href="#" class="dropdown-item">Monitores</a> </li>
+                                <a href="#" class="dropdown-item">Gabinetes</a> </li>
+                                <a href="#" class="dropdown-item">Mousepads</a> </li>
+                                <a href="#" class="dropdown-item">Headsets</a> </li>
+                                <a href="#" class="dropdown-item">webcams</a> </li>
+                        </div>
+                      </div>
 
-            <button class="btn-primary">Cadastrar</button>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
 
-            </div>
+                            Contato
+                            
+                        </a>
+                    </li>
 
-        </form>  
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Rastreio
+                        </a>
+                    </li>
+                </ul>
 
+                <div class="container d-flex justify-content-end">
+                    <form class="d-flex w-75">
+                        <input type="text" class="form-control w-100">                   
+                    </form>
+                    <button type="submit" class="btn btn-dark"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg> 
+                    </button>
+                </div>
+                
+                    <div class="container d-flex justify-content-end w-25">
+                        <a href="#" class="btn btn-light "> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            Carrinho
+                        </a> 
+                    </div>
+    
+                    <div class="container d-flex justify-content-start w-25"> 
+                        <a href="#" class="btn btn-dark text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
+                            Cadastro/Login
+                        </a>
+                   
+                    </div> 
+                
+                </div>
+        </nav>
     </div>
+
+<div class="container">
+
+    <div class="tela-login">
+         <h1 class="nome-login"> Login </h1>
+         <br>
+         <input type="text" placeholder="Email" >
+         <br><br>
+         <input type="password" placeholder="Senha">
+         <br>
+         <a class="esqueceu" href="#">Esqueceu a senha?</a>
+         <br><br>
+         <button class="botao-entrar">ENTRAR</button>
+         
+    </div>
+
+    <div class="tela-cadastro">
+        <h1 class="nome-login"> Cadastre-se </h1>
+        <br>
+        <div> 
+            <input type="text" placeholder="Nome" >
+        </div>
+        <div>
+            <input type="text" placeholder="Sobrenome" >
+        </div>
+        <div>
+            <input type="text" placeholder="Email" >
+        </div>
+        <div>
+            <input type="date" placeholder="Data" >
+        </div>
+        <div>
+            <input type="text" value placeholder="123.XXX.XXX-XX" >
+        </div>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <button class="botao-entrar">CRIAR CADASTRO</button>
+        
+   </div>
+   
+</div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<footer class=" " >
+    <div class="container">
+        <p>dadsadd</p>
+        
+    </div>
+</footer>
 
 
 </body>
+
+
+
 </html>
