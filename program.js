@@ -30,6 +30,15 @@ app.post("/salvarLogin", (req,res) =>{
     let senha = req.body.senha
 })
 
+app.post("/salvarcadastro", (req,res) =>{
+    let nome = req.body.nome
+    let Sobrenome = req.body.Sobrenome
+    let Email = req.body.Email
+    let Data = req.body.Data
+    let Cpf = req.body.Cpf
+    let senha = req.body.senha
+})
+
 
 app.listen(8080, ()=>{
     console.log("Programa rodando!!")
