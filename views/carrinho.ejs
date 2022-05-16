@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>EJS | Carrinho</title>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ml">
+                <a
+                    href="/"
+                    class="navbar-brand mb-0 h1 p-2 ">
+                    EJS
+    
+                </a>
+    
+                <button type="button" 
+                data-bs-toggle="collapse"
+                data-bs-target="navbarNav"
+                class="navbar-toggler" 
+                aria-controls="navbarNav" 
+                aria-expended="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-25">
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle"
+                            type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                              Periféricos
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a href="#" class="dropdown-item">Mouses</a>
+                                    <a href="#" class="dropdown-item">Teclados</a>
+                                    <a href="#" class="dropdown-item">Monitores</a>
+                                    <a href="#" class="dropdown-item">Gabinetes</a>
+                                    <a href="#" class="dropdown-item">Mousepads</a>
+                                    <a href="#" class="dropdown-item">Headsets</a>
+                                    <a href="#" class="dropdown-item">webcams</a>
+                            </div>
+                          </div>
+    
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link">
+    
+                                Contato
+                                
+                            </a>
+                        </li>
+    
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link">
+                                Rastreio
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <div class="container d-flex justify-content-end">
+                        <form class="d-flex w-75">
+                            <input type="text" class="form-control w-100">                   
+                        </form>
+                        <button type="submit" class="btn btn-dark"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg> 
+                        </button>
+                    </div>
+                    
+                        <div class="container d-flex justify-content-end w-25">
+                            <a href="#" class="btn btn-light "> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                Carrinho
+                            </a> 
+                        </div>
+        
+                        <div class="container d-flex justify-content-start w-25"> 
+                            <a href="/cadastro" class="btn btn-dark text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                                Cadastro/Login
+                            </a>
+                       
+                        </div> 
+                    
+                    </div>
+            </nav>
+        </div>
+    
+    <div>
+    
+        <br> <br> <br>
+        
+    </div>
+<main>
+  <nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a id="navTitle" class="navbar-brand" href="index.html"></a>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" id="desc" placeholder="Description">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="amount" placeholder="Amount">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="value" placeholder="Value">
+			</div>
+			<span id="btnUpdate" style="display: none;">
+				<span id="inputIDUpdate"></span>
+				<button onclick="updateData();" class="btn btn-default">Save</button>
+				<button onclick="resetForm();" class="btn btn-default">Cancel</button>
+			</span>
+			<span id="btnAdd">
+				<button onclick="addData();" class="btn btn-default">Add</button>
+				<button onclick="resetForm();" class="btn btn-default">Reset</button>
+				<button onclick="deleteList();" class="btn btn-default">Delete list</button>
+			</span>
+		</div>
+
+		<div id="errors" style="display: none;"></div>
+
+		<table id="listTable" class="table">
+		
+		</table>
+	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<h4 class="text-center text-success">Total: <span id="totalValue">$ 0,00</span></h4>
+		</div>
+	</nav>
+</main>
+
+     <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>fale conosco em nossas redes sociais:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i> EJS 
+            </h6>
+            <p>
+              Nós somos uma empresa especializada em venda de periféricos de marcas consagradas tanto na parte de games quanto na parte de office, além disso contamos com uma taxa de valor do frete abaixo da concorrencia
+  
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Métodos de pagamento
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Boleto</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Visa</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">MasterCard</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Pix</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Links úteis 
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Carrinho</a>
+            </p>
+            <p>
+              <a href="/cadastro" class="text-reset">Cadastro/Login</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Produtos</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Preciso de ajuda</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> endereço qualquer</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> numero da empresa</p>
+            <p><i class="fas fa-print me-3"></i> numero alternativo</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">EJS.COM</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      var list = [
+	{"desc":"aleatorio", "amount":"1", "value":"5.40"},
+	{"desc":"aleatorio", "amount":"12", "value":"1.99"},
+	{"desc":"aleatorio", "amount":"1", "value":"15.00"}
+];
+
+
+//somando total
+function getTotal(list){
+	var total = 0;
+	for(var key in list){
+		total += list[key].value * list[key].amount;
+	}
+	document.getElementById("totalValue").innerHTML = formatValue(total);
+}
+
+//criando a tabela
+function setList(list){
+	var table = '<thead><tr><td>Description</td><td>Amount</td><td>Value</td><td>Action</td></tr></thead><tbody>';
+	for(var key in list){
+		table += '<tr><td>'+ formatDesc(list[key].desc) +'</td><td>'+ formatAmount(list[key].amount) +'</td><td>'+ formatValue(list[key].value) +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');">Edit</button> <button class="btn btn-default" onclick="deleteData('+key+');">Delete</button></td></tr>';
+	}
+	table += '</tbody>';
+
+	document.getElementById('listTable').innerHTML = table;
+	getTotal(list);
+	saveListStorage(list);
+}
+
+//formatando o nome do produto
+function formatDesc(desc){
+	var str = desc.toLowerCase();
+	str = str.charAt(0).toUpperCase() + str.slice(1);
+	return str;
+}
+
+//formatando a quantidade
+function formatAmount(amount){
+	return parseInt(amount);
+}
+
+//formatando o preço
+function formatValue(value){
+	var str = parseFloat(value).toFixed(2) + "";
+	str = str.replace(".",",");
+	str = "$ " + str;
+	return str;
+}
+
+//adicionar novo produto
+function addData(){
+	if(!validation()){
+		return;
+	}
+	var desc = document.getElementById("desc").value;
+	var amount = document.getElementById("amount").value;
+	var value = document.getElementById("value").value;
+
+	list.unshift({"desc":desc , "amount":amount , "value":value });
+	setList(list);
+}
+
+//botões de editar
+function setUpdate(id){
+	var obj = list[id];
+	document.getElementById("desc").value = obj.desc;
+	document.getElementById("amount").value = obj.amount;
+	document.getElementById("value").value = obj.value;
+	document.getElementById("btnUpdate").style.display = "inline-block";
+	document.getElementById("btnAdd").style.display = "none";
+
+	document.getElementById("inputIDUpdate").innerHTML = '<input id="idUpdate" type="hidden" value="'+id+'">';
+}
+
+//limpa os campos de editar
+function resetForm(){
+	document.getElementById("desc").value = "";
+	document.getElementById("amount").value = "";
+	document.getElementById("value").value = "";
+	document.getElementById("btnUpdate").style.display = "none";
+	document.getElementById("btnAdd").style.display = "inline-block";
+	
+	document.getElementById("inputIDUpdate").innerHTML = "";
+	document.getElementById("errors").style.display = "none";
+}
+
+//atualizando os dados
+function updateData(){
+	if(!validation()){
+		return;
+	}
+	var id = document.getElementById("idUpdate").value;
+	var desc = document.getElementById("desc").value;
+	var amount = document.getElementById("amount").value;
+	var value = document.getElementById("value").value;
+
+	list[id] = {"desc":desc, "amount":amount, "value":value};
+	resetForm();
+	setList(list);
+}
+
+//deletando os dados
+function deleteData(id){
+	if(confirm("Delete this item?")){
+		if(id === list.length - 1){
+			list.pop();
+		}else if(id === 0){
+			list.shift();
+		}else{
+			var arrAuxIni = list.slice(0,id);
+			var arrAuxEnd = list.slice(id + 1);
+			list = arrAuxIni.concat(arrAuxEnd);
+		}
+		setList(list);
+	}
+}
+
+//validando e printando erros
+function validation(){
+	var desc = document.getElementById("desc").value;
+	var amount = document.getElementById("amount").value;
+	var value = document.getElementById("value").value;
+	var errors = "";
+	document.getElementById("errors").style.display = "none";
+
+	if(desc === ""){
+		errors += '<p>Fill out description</p>';
+	}
+	if(amount === ""){
+		errors += '<p>Fill out a quantity</p>';
+	}else if(amount != parseInt(amount)){
+		errors += '<p>Fill out a valid amount</p>';
+	}
+	if(value === ""){
+		errors += '<p>Fill out a value</p>';
+	}else if(value != parseFloat(value)){
+		errors += '<p>Fill out a valid value</p>';
+	}
+
+	if(errors != ""){
+		document.getElementById("errors").style.display = "block";
+		document.getElementById("errors").innerHTML = "<h3>Error:</h3>" + errors;
+		return 0;
+	}else{
+		return 1;
+	}
+}
+
+//deletando lista
+function deleteList(){
+	if (confirm("Delete this list?")){
+		list = [];
+		setList(list);
+	}
+}
+
+//salvando em storage
+function saveListStorage(list){
+	var jsonStr = JSON.stringify(list);
+	localStorage.setItem("list",jsonStr);
+}
+
+//verifica se já tem algo salvo
+function initListStorage(){
+	var testList = localStorage.getItem("list");
+	if(testList){
+		list = JSON.parse(testList);
+	}
+	setList(list);
+}
+
+initListStorage();
+</script>
+</body>
+</html>
