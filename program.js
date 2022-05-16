@@ -25,6 +25,12 @@ app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
 })
 
+// rota carrinho
+
+app.get("/carrinho", (req, res)=>{
+    res.render("carrinho")
+})
+
 app.post("/salvarLogin", (req,res) =>{
     let email = req.body.email
     let senha = req.body.senha
