@@ -22,6 +22,11 @@ app.get("/", (req, res) =>{
     res.render("home")
 })
 
+//Rota monitores
+app.get("/monitores", (req, res)=>{
+    res.render("monitores")
+})
+
 //Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
