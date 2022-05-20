@@ -1,18 +1,20 @@
 const express = require("express")
 const app = express()
-//const connection = require("/database/database")
+//const connection = require("./database/database")
 const bodyParser = require("body-parser")
+//const Usuario = require("./database/Usuario")
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-/* 
-connection
+
+
+/*connection
         .authenticate()
         .then(()=>{
             console.log("Conecção com banco de dados estabelecida")
         }) .catch((error)=>{
-            console.log("error")
+            console.log(error)
         })
 */
 //Rota principal
@@ -38,11 +40,25 @@ app.post("/salvarLogin", (req,res) =>{
 
 app.post("/salvarcadastro", (req,res) =>{
     let nome = req.body.nome
-    let Sobrenome = req.body.Sobrenome
-    let Email = req.body.Email
-    let Data = req.body.Data
-    let Cpf = req.body.Cpf
+    let sobrenome = req.body.sobrenome
+    let email = req.body.email
+    let data = req.body.data
+    let cpf = req.body.cpf
     let senha = req.body.senha
+})
+
+app.post("/salvarlogin",(req,res) =>{
+   let email = req.body.email
+   let senha = req.body.senha
+   Usuario.create({
+        email: email, 
+        senha: senha
+   }).then(()=>{
+       res.redirect("/home")
+   }) 
+
+
+
 })
 
 
