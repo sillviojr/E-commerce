@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
-
 *{
     padding: 0;
     border: 0;
 }
 
 
-.produtos-promocionais{
+.produtos-home{
     display: inline-block;
     padding: 1.5%;
     
