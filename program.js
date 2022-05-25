@@ -32,6 +32,11 @@ app.get("/gabinetes", (req, res)=>{
     res.render("gabinetes")
 })
 
+//Rota Mouses
+app.get("/mouses", (req, res)=>{
+    res.render("mouses")
+})
+
 //Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
