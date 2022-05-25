@@ -37,6 +37,26 @@ app.get("/mouses", (req, res)=>{
     res.render("mouses")
 })
 
+//Rota Teclados
+app.get("/teclados", (req, res)=>{
+    res.render("teclados")
+})
+
+//Rota Mousepad
+app.get("/mousepads", (req, res)=>{
+    res.render("mousepads")
+})
+
+//Rota Headsets
+app.get("/headsets", (req, res)=>{
+    res.render("headsets")
+})
+
+//Rota Webcams
+app.get("/webcams", (req, res)=>{
+    res.render("webcams")
+})
+
 //Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
