@@ -3,8 +3,12 @@
     border: 0;
 }
 
+.caixa-produtos{
+    box-sizing: 30px;
 
-.produtos-monitores{
+}
+
+.produtos-gabinetes{
     display: inline-block;
     padding: 1.5%;
     

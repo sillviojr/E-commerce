@@ -27,6 +27,11 @@ app.get("/monitores", (req, res)=>{
     res.render("monitores")
 })
 
+//Rota gabinetes
+app.get("/gabinetes", (req, res)=>{
+    res.render("gabinetes")
+})
+
 //Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
