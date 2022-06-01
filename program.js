@@ -3,11 +3,11 @@ const app = express()
 //const connection = require("./database/database")
 const bodyParser = require("body-parser")
 //const Usuario = require("./database/Usuario")
-
+//const Cadastro = require("./database/Cadastro")
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
-
-
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 /*connection
         .authenticate()
@@ -91,9 +91,6 @@ app.post("/salvarlogin",(req,res) =>{
    }).then(()=>{
        res.redirect("/home")
    }) 
-
-
-
 })
 
 
