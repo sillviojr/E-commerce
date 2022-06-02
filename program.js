@@ -1,22 +1,22 @@
 const express = require("express")
 const app = express()
-//const connection = require("./database/database")
+const connection = require("./database/database")
 const bodyParser = require("body-parser")
-//const Usuario = require("./database/Usuario")
+const Usuario = require("./database/Usuario")
 //const Cadastro = require("./database/Cadastro")
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-/*connection
+connection
         .authenticate()
         .then(()=>{
             console.log("Conecção com banco de dados estabelecida")
         }) .catch((error)=>{
             console.log(error)
         })
-*/
+
 //Rota principal
 app.get("/", (req, res) =>{
     res.render("home")
@@ -76,6 +76,17 @@ app.post("/salvarcadastro", (req,res) =>{
     let data = req.body.data
     let cpf = req.body.cpf
     let senha = req.body.senha
+
+    Cadastro.create({
+        nome: nome,
+        sobrenome: sobrenome,
+        email: email,
+        data: data,
+        cpf: cpf,
+        senha: senha
+    }).then(()=>{
+        res.redirect("/")
+    })
 })
 
 app.post("/salvarlogin",(req,res) =>{
