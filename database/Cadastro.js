@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 const connection = require("./database")
 
-const Cadastro = connection.define('usuario',{
+const Cadastro = connection.define('cadastros',{
     nome:{
         type: Sequelize.STRING,
         allowNull: false
@@ -28,6 +28,6 @@ const Cadastro = connection.define('usuario',{
     }
 })
 
-Cadastro.sync({force:false}).then(()=>{})
+Cadastro.sync({force:true}).then(()=>{})
 
 module.exports = Cadastro
