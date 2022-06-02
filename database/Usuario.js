@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 const connection = require("./database")
 
-const Usuario = connection.define('usuario',{
+const Usuario = connection.define('usuarios',{
     login:{
         type:Sequelize.STRING,
         allowNull: false
@@ -9,7 +9,11 @@ const Usuario = connection.define('usuario',{
     senha:{
         type:Sequelize.STRING,
         allowNull: false
-    } 
+    },
+    pin:{
+        type: Sequelize.STRING,
+        allowNull: false
+    }
 })
 
 Usuario.sync({force:false}).then(()=>{})
