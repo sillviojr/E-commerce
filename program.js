@@ -57,6 +57,11 @@ app.get("/webcams", (req, res)=>{
     res.render("webcams")
 })
 
+//Rota Rastreio
+app.get("/rastreio", (req, res)=>{
+    res.render("rastreio")
+})
+
 //Rota cadastro
 app.get("/cadastro", (req, res)=>{
     res.render("cadastro")
