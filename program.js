@@ -76,22 +76,11 @@ app.get("/carrinho", (req, res)=>{
 
 app.post("/salvarcadastro", (req,res) =>{
     let nome = req.body.nome
-    let sobrenome = req.body.sobrenome
     let email = req.body.email
     let data = req.body.data
-    let cpf = req.body.cpf
     let senha = req.body.senha
 
-    Cadastro.create({
-        nome: nome,
-        sobrenome: sobrenome,
-        email: email,
-        data: data,
-        cpf: cpf,
-        senha: senha
-    }).then(()=>{
-        res.redirect("/")
-    })
+    res.json({nome, email, data, senha})
 })
 
 app.post("/salvarlogin",(req,res) =>{
