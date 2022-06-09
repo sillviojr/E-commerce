@@ -56,7 +56,7 @@ app.post("/salvarcadastro", (req,res) =>{
     let salt = bcrypt.genSaltSync(10)
     let hash = bcrypt.hashSync(senha, salt)
     
-    Usuario.create({
+    Cadastro.create({
         nome: nome,
         email: email,
         data: data,
