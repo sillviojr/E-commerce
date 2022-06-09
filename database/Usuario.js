@@ -16,6 +16,4 @@ const Usuario = connection.define('usuarios',{
     }
 })
 
-Usuario.sync({force:true}).then(()=>{})
-
 module.exports = Usuario
