@@ -24,7 +24,7 @@ const productsController = require("./produtos/ProductsController")
 app.use("/", productsController)
 
 //Rota principal
-app.get("/homepage", (req, res) =>{
+app.get("/home", (req, res) =>{
     res.render("home")
 })
 
