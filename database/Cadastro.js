@@ -6,20 +6,12 @@ const Cadastro = connection.define('cadastros',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    sobrenome:{
-        type: Sequelize.STRING,
-        allowNull: false
-    },
     email:{
         type: Sequelize.STRING,
         allowNull: false
     },
     data:{
         type: Sequelize.DATE,
-        allowNull: false
-    },
-    cpf:{
-        type: Sequelize.STRING,
         allowNull: false
     },
     senha:{
