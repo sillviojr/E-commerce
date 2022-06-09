@@ -2,9 +2,11 @@ const express = require("express")
 const app = express()
 //const connection = require("./database/database")
 const bodyParser = require("body-parser")
+const bcrypt = require("bcryptjs")
 //const Usuario = require("./database/Usuario")
 //const Cadastro = require("./database/Cadastro")
 //const Products = require("./produtos/Products")
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -51,7 +53,19 @@ app.post("/salvarcadastro", (req,res) =>{
     let data = req.body.data
     let senha = req.body.senha
 
-    res.json({nome, email, data, senha})
+    let salt = bcrypt.genSaltSync(10)
+    let hash = bcrypt.hashSync(senha, salt)
+    
+    /*Usuario.create({
+        nome: nome,
+        email: email,
+        data: data,
+        senha: hash
+    }).then(()=>{
+            res.redirect("/")
+    }).catch((err)=>{
+        res.redirect("/")
+    })*/
 })
 
 app.post("/salvarlogin",(req,res) =>{
