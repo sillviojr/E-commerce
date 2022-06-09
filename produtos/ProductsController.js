@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const Products = require("./Products")
+//const Products = require("./Products")
 
 router.get("/monitores", (req, res)=>{
     res.render("produtos/monitores")
@@ -30,3 +30,5 @@ router.get("/webcams", (req, res)=>{
     res.render("produtos/webcams")
 })
 
+
+module.exports = router
