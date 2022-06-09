@@ -1,61 +1,31 @@
 const express = require("express")
 const app = express()
-const connection = require("./database/database")
+//const connection = require("./database/database")
 const bodyParser = require("body-parser")
-const Usuario = require("./database/Usuario")
+//const Usuario = require("./database/Usuario")
 //const Cadastro = require("./database/Cadastro")
+//const Products = require("./produtos/Products")
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-connection
+const productsController = require("./produtos/ProductsController")
+
+/*connection
         .authenticate()
         .then(()=>{
             console.log("Conecção com banco de dados estabelecida")
         }) .catch((error)=>{
             console.log(error)
         })
-
+*/
 //Rota principal
 app.get("/", (req, res) =>{
     res.render("home")
 })
 
 //Rota monitores
-app.get("/monitores", (req, res)=>{
-    res.render("monitores")
-})
-
-//Rota gabinetes
-app.get("/gabinetes", (req, res)=>{
-    res.render("gabinetes")
-})
-
-//Rota Mouses
-app.get("/mouses", (req, res)=>{
-    res.render("mouses")
-})
-
-//Rota Teclados
-app.get("/teclados", (req, res)=>{
-    res.render("teclados")
-})
-
-//Rota Mousepad
-app.get("/mousepads", (req, res)=>{
-    res.render("mousepads")
-})
-
-//Rota Headsets
-app.get("/headsets", (req, res)=>{
-    res.render("headsets")
-})
-
-//Rota Webcams
-app.get("/webcams", (req, res)=>{
-    res.render("webcams")
-})
 
 //Rota Rastreio
 app.get("/rastreio", (req, res)=>{
