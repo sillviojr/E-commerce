@@ -21,12 +21,11 @@ const productsController = require("./produtos/ProductsController")
         })
 */
 //Rota principal
-app.get("/", (req, res) =>{
+app.get("/homepage", (req, res) =>{
     res.render("home")
 })
 
-//Rota monitores
-
+app.use("/", productsController)
 //Rota Rastreio
 app.get("/rastreio", (req, res)=>{
     res.render("rastreio")
