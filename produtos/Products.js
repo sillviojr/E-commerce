@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize")
-const connection = require("../../JavaScript/CRUDCompleto/database/database")
+const connection = require("../database/database")
 
 const Products = connection.define('produtos',{
     title:{
@@ -11,7 +11,5 @@ const Products = connection.define('produtos',{
         allowNull: false
     }
 })
-
-Products.sync({force:true}).then(()=>{})
 
 module.exports = Products
