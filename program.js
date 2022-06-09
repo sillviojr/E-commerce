@@ -20,12 +20,14 @@ const productsController = require("./produtos/ProductsController")
             console.log(error)
         })
 */
+
+app.use("/", productsController)
+
 //Rota principal
 app.get("/homepage", (req, res) =>{
     res.render("home")
 })
 
-app.use("/", productsController)
 //Rota Rastreio
 app.get("/rastreio", (req, res)=>{
     res.render("rastreio")
