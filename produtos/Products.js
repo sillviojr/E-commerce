@@ -12,4 +12,6 @@ const Products = connection.define('produtos',{
     }
 })
 
+Products.sync({force:true}).then(()=>{})
+
 module.exports = Products
