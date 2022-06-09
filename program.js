@@ -1,11 +1,11 @@
 const express = require("express")
 const app = express()
-//const connection = require("./database/database")
+const connection = require("./database/database")
 const bodyParser = require("body-parser")
 const bcrypt = require("bcryptjs")
-//const Usuario = require("./database/Usuario")
-//const Cadastro = require("./database/Cadastro")
-//const Products = require("./produtos/Products")
+const Usuario = require("./database/Usuario")
+const Cadastro = require("./database/Cadastro")
+const Products = require("./produtos/Products")
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -14,19 +14,19 @@ app.use(bodyParser.json())
 
 const productsController = require("./produtos/ProductsController")
 
-/*connection
+connection
         .authenticate()
         .then(()=>{
             console.log("Conecção com banco de dados estabelecida")
         }) .catch((error)=>{
             console.log(error)
         })
-*/
+
 
 app.use("/", productsController)
 
 //Rota principal
-app.get("/home", (req, res) =>{
+app.get("/", (req, res) =>{
     res.render("home")
 })
 
@@ -56,7 +56,7 @@ app.post("/salvarcadastro", (req,res) =>{
     let salt = bcrypt.genSaltSync(10)
     let hash = bcrypt.hashSync(senha, salt)
     
-    /*Usuario.create({
+    Usuario.create({
         nome: nome,
         email: email,
         data: data,
@@ -65,7 +65,7 @@ app.post("/salvarcadastro", (req,res) =>{
             res.redirect("/")
     }).catch((err)=>{
         res.redirect("/")
-    })*/
+    })
 })
 
 app.post("/salvarlogin",(req,res) =>{
