@@ -58,6 +58,11 @@ app.get("/carrinho", (req, res)=>{
     res.render("carrinho")
 })
 
+//Rota contato
+
+app.get("/contato", (req, res)=>{
+    res.render("contato")
+})
 
 app.post("/salvarcadastro", (req,res) =>{
     let nome = req.body.nome
