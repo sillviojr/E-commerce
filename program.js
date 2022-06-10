@@ -64,6 +64,12 @@ app.get("/contato", (req, res)=>{
     res.render("contato")
 })
 
+//Rota login
+
+app.get("/login", (req, res)=>{
+    res.render("login")
+})
+
 app.post("/salvarcadastro", (req,res) =>{
     let nome = req.body.nome
     let email = req.body.email
