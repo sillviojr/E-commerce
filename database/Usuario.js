@@ -9,10 +9,6 @@ const Usuario = connection.define('usuarios',{
     senha:{
         type:Sequelize.STRING,
         allowNull: false
-    },
-    pin:{
-        type: Sequelize.STRING,
-        allowNull: false
     }
 })
 

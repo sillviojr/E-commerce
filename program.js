@@ -64,11 +64,6 @@ app.get("/contato", (req, res)=>{
     res.render("contato")
 })
 
-//Rota login
-
-app.get("/login", (req, res)=>{
-    res.render("login")
-})
 
 app.post("/salvarcadastro", (req,res) =>{
     let nome = req.body.nome
@@ -93,32 +88,37 @@ app.post("/salvarcadastro", (req,res) =>{
                 res.redirect("/")
             })
         }else{
-            res.redirect("/salvarcadastro")
+            res.redirect("/cadastro")
         }
     })
 
 
 })
 
-app.post("/salvarlogin",(req,res) =>{
-   let email = req.body.email
-   let senha = req.body.senha
+//Rota login
 
-   Usuario.findOne({where:{email: email}}).then(usuarios =>{
-       if(usuarios != undefined){
-            let correct = bcrypt.compareSync(senha, usuarios.senha)
+app.get("/login", (req, res)=>{
+    res.render("login")
+})
 
+app.post("/authenticate",(req,res) =>{
+    let email = req.body.email
+    let senha = req.body.senha
+    
+    Cadastro.findOne({where:{email: email}}).then(cadastros =>{
+        if(cadastros != undefined){
+            let correct = bcrypt.compareSync(senha, cadastros.senha)
+            
             if(correct){
-                req.session.usuarios = {
-                    id: usuarios.id,
-                    email: usuarios.email
+                req.session.cadastros = {
+                    id: cadastros.id,
+                    email: cadastros.email
                 }
-                res.json(req.session.usuarios)
             }else{
-                res.redirect("/salvarcadastro")
+                res.redirect("/cadastro")
             }
        }else{
-           res.redirect("/salvarcadastro")
+           res.redirect("/cadastro")
        }
    })
 })
