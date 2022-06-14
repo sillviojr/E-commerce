@@ -6,7 +6,6 @@ const bcrypt = require("bcryptjs")
 const session = require("express-session")
 const adminAuth = require("./middlewares/adminAuth")
 const Usuario = require("./database/Usuario")
-const Cadastro = require("./database/Cadastro")
 const Products = require("./produtos/Products")
 
 app.set('view engine', 'ejs')
