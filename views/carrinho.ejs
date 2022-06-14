@@ -148,6 +148,9 @@
 		<div class="container">
 			<h4 class="text-center text-success">Total: <span id="totalValue">$ 0,00</span></h4>
 		</div>
+    <div>
+      <button class="botao" onclick="comprado()">Comprar</button>
+    </div>
 	</nav>
 </main>
 
@@ -437,6 +440,10 @@ function initListStorage(){
 		list = JSON.parse(testList);
 	}
 	setList(list);
+}
+
+function comprado(){
+  window.alert("Compra realizada com sucesso!")
 }
 
 initListStorage();
